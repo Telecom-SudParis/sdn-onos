@@ -55,6 +55,6 @@ sudo python connected_topo.py
 
 4/ Observe the custom topology on ONOS GUI
 
-![tes][https://raw.githubusercontent.com/Telecom-SudParis/sdn-onos/main/topo/connected_topo.png]
+![custom_topo](https://raw.githubusercontent.com/Telecom-SudParis/sdn-onos/main/topo/connected_topo.png)
 
 
