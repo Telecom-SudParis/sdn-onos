@@ -64,6 +64,21 @@ sudo python connected_topo.py
 
 ![custom_topo](https://raw.githubusercontent.com/Telecom-SudParis/sdn-onos/main/topo/connected_topo.png)
 
+5/ Mininet commands
+5.1/ Ping all hosts in the topology mutually 
+```
+pingall
+```
+
+5.2/ Send TCP packets between two hosts
+```
+iperf h1 h3
+```
+
+5.3/ Bring down a link
+```
+link s1 s3 down
+```
 
 ## Adding Flow Rules <a name="flow"></a>
 ### Proactive Flow Insertion
