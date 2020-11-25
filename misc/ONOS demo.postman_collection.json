@@ -1,0 +1,93 @@
+{
+	"variables": [],
+	"info": {
+		"name": "ONOS demo",
+		"_postman_id": "ddfe0f09-40c6-e50e-b7cf-70750361e1c5",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Flows of REST app",
+			"request": {
+				"url": "http://172.17.0.5:8181/onos/v1/flows/application/org.onosproject.rest",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic a2FyYWY6a2FyYWY=",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Add multiple flows",
+			"request": {
+				"url": "http://172.17.0.5:8181/onos/v1/flows",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic a2FyYWY6a2FyYWY=",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"flows\": [\n    {\n      \"priority\": 40000,\n      \"timeout\": 3600,\n      \"isPermanent\": false,\n      \"deviceId\": \"of:0000000000000001\",\n      \"treatment\": {\n        \"instructions\": [\n          {\n            \"type\": \"OUTPUT\",\n            \"port\": \"5\"\n          }\n        ],\n        \"deferred\": []\n      },\n      \"selector\": {\n        \"criteria\": [\n          {\n            \"type\": \"ETH_TYPE\",\n            \"ethType\": \"0x800\"\n          },\n          {\n            \"type\": \"IN_PORT\",\n            \"port\": 2\n          },\n          {\n            \"type\": \"IPV4_DST\",\n            \"ip\": \"10.0.0.3/32\"\n          },\n          {\n            \"type\": \"IPV4_SRC\",\n            \"ip\": \"10.0.0.1/32\"\n          }\n        ]\n      }\n    },\n    {\n      \"priority\": 40000,\n      \"timeout\": 3600,\n      \"isPermanent\": false,\n      \"deviceId\": \"of:0000000000000005\",\n      \"treatment\": {\n        \"instructions\": [\n          {\n            \"type\": \"OUTPUT\",\n            \"port\": \"4\"\n          }\n        ],\n        \"deferred\": []\n      },\n      \"selector\": {\n        \"criteria\": [\n          {\n            \"type\": \"ETH_TYPE\",\n            \"ethType\": \"0x800\"\n          },\n          {\n            \"type\": \"IN_PORT\",\n            \"port\": 1\n          },\n          {\n            \"type\": \"IPV4_DST\",\n            \"ip\": \"10.0.0.3/32\"\n          },\n          {\n            \"type\": \"IPV4_SRC\",\n            \"ip\": \"10.0.0.1/32\"\n          }\n        ]\n      }\n    },\n    {\n      \"priority\": 40000,\n      \"timeout\": 3600,\n      \"isPermanent\": false,\n      \"deviceId\": \"of:0000000000000003\",\n      \"treatment\": {\n        \"instructions\": [\n          {\n            \"type\": \"OUTPUT\",\n            \"port\": \"4\"\n          }\n        ],\n        \"deferred\": []\n      },\n      \"selector\": {\n        \"criteria\": [\n          {\n            \"type\": \"ETH_TYPE\",\n            \"ethType\": \"0x800\"\n          },\n          {\n            \"type\": \"IN_PORT\",\n            \"port\": 5\n          },\n          {\n            \"type\": \"IPV4_DST\",\n            \"ip\": \"10.0.0.3/32\"\n          },\n          {\n            \"type\": \"IPV4_SRC\",\n            \"ip\": \"10.0.0.1/32\"\n          }\n        ]\n      }\n    },\n    {\n      \"priority\": 40000,\n      \"timeout\": 3600,\n      \"isPermanent\": false,\n      \"deviceId\": \"of:0000000000000003\",\n      \"treatment\": {\n        \"instructions\": [\n          {\n            \"type\": \"OUTPUT\",\n            \"port\": \"5\"\n          }\n        ],\n        \"deferred\": []\n      },\n      \"selector\": {\n        \"criteria\": [\n          {\n            \"type\": \"ETH_TYPE\",\n            \"ethType\": \"0x800\"\n          },\n          {\n            \"type\": \"IN_PORT\",\n            \"port\": 4\n          },\n          {\n            \"type\": \"IPV4_DST\",\n            \"ip\": \"10.0.0.1/32\"\n          },\n          {\n            \"type\": \"IPV4_SRC\",\n            \"ip\": \"10.0.0.3/32\"\n          }\n        ]\n      }\n    },\n    {\n      \"priority\": 40000,\n      \"timeout\": 3600,\n      \"isPermanent\": false,\n      \"deviceId\": \"of:0000000000000005\",\n      \"treatment\": {\n        \"instructions\": [\n          {\n            \"type\": \"OUTPUT\",\n            \"port\": \"1\"\n          }\n        ],\n        \"deferred\": []\n      },\n      \"selector\": {\n        \"criteria\": [\n          {\n            \"type\": \"ETH_TYPE\",\n            \"ethType\": \"0x800\"\n          },\n          {\n            \"type\": \"IN_PORT\",\n            \"port\": 4\n          },\n          {\n            \"type\": \"IPV4_DST\",\n            \"ip\": \"10.0.0.1/32\"\n          },\n          {\n            \"type\": \"IPV4_SRC\",\n            \"ip\": \"10.0.0.3/32\"\n          }\n        ]\n      }\n    },\n    {\n      \"priority\": 40000,\n      \"timeout\": 3600,\n      \"isPermanent\": false,\n      \"deviceId\": \"of:0000000000000001\",\n      \"treatment\": {\n        \"instructions\": [\n          {\n            \"type\": \"OUTPUT\",\n            \"port\": \"2\"\n          }\n        ],\n        \"deferred\": []\n      },\n      \"selector\": {\n        \"criteria\": [\n          {\n            \"type\": \"ETH_TYPE\",\n            \"ethType\": \"0x800\"\n          },\n          {\n            \"type\": \"IN_PORT\",\n            \"port\": 5\n          },\n          {\n            \"type\": \"IPV4_DST\",\n            \"ip\": \"10.0.0.1/32\"\n          },\n          {\n            \"type\": \"IPV4_SRC\",\n            \"ip\": \"10.0.0.3/32\"\n          }\n        ]\n      }\n    }\n  ]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET flow from a deviceid",
+			"request": {
+				"url": "http://172.17.0.5:8181/onos/v1/flows/of%3A0000000000000001",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic a2FyYWY6a2FyYWY=",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET all flows",
+			"request": {
+				"url": "http://172.17.0.5:8181/onos/v1/flows",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic a2FyYWY6a2FyYWY=",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
