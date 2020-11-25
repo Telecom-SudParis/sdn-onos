@@ -8,6 +8,8 @@ You need to be able to run the onos-tutorial-1.15.0 VM, which can be downloaded 
 1. [Getting started with OpenvSwitch and ONOS](#ovs-onos)
 2. [Running Mininet with custom topology](#mininet)
 3. [Adding Flow Rules](#flow)
+4. [Adding Host Intent](#intent)
+5. [Question](#question)
 
 
 ## Getting started with OpenvSwitch and ONOS <a name="ovs-onos"></a>
@@ -302,11 +304,11 @@ app activate fwd
 app deactivate fwd
 ```
 
-## Adding Host Intent
+## Adding Host Intent <a name="intent"></a>
 ```
 add-host-intent <host_id1> <host_id2>
 ```
 
-## Question
+## Question <a name="question"></a>
 In your group, adding a set of flow rules in order to ping between two hosts over three switches.
 
