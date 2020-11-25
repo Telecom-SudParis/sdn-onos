@@ -64,7 +64,7 @@ sudo python connected_topo.py
 
 
 ## Adding Flow Rules <a name="flow"></a>
-# Proactive Flow Insertion
+### Proactive Flow Insertion
 **Prerequisite** Flows could be added via the REST API using Postman (Chrome Extension) and a Json Beautifier tool (https://jsonbeautifier.org/) 
 1/ Send the **POST** method with the following URL and Content
 ```
@@ -291,7 +291,7 @@ http://172.17.0.5:8181/onos/v1/flows
 ```
 http://172.17.0.5:8181/onos/v1/flows/application/org.onosproject.rest
 ```
-# Reactive Flow Insertion
+### Reactive Flow Insertion
 1/ Flows are added on packet arrival using the Forwarding app
 ```
 app activate fwd
@@ -301,4 +301,12 @@ app activate fwd
 ```
 app deactivate fwd
 ```
+
+## Adding Host Intent
+```
+add-host-intent <host_id1> <host_id2>
+```
+
+## Question
+In your group, adding a set of flow rules in order to ping between two hosts over three switches.
 
