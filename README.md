@@ -30,7 +30,7 @@ sudo ovs-vsctl show
 http://172.17.0.5:8181/onos/ui/login.html
 ```
 
-4.2/ Access the ONOS REST APIs as follows:
+4.2/ Access the ONOS REST APIs as follows with the credentials **karaf/karaf**:
 ```
 172.17.0.5:8181/onos/v1/docs/
 ```
@@ -83,6 +83,9 @@ link s1 s3 down
 ## Adding Flow Rules <a name="flow"></a>
 ### Proactive Flow Insertion
 **Prerequisite** Flows could be added via the REST API using Postman (Chrome Extension) and a Json Beautifier tool (https://jsonbeautifier.org/) 
+**NOTICE** If you use Postman or curl to send the REST request, remember to specify the Authorization method as follows
+![rest_creds](https://raw.githubusercontent.com/Telecom-SudParis/sdn-onos/main/misc/rest_creds.png)
+
 1/ Send the **POST** method with the following URL and Content
 ```
 http://172.17.0.5:8181/onos/v1/flows
