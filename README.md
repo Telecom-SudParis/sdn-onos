@@ -5,12 +5,18 @@ This tutorial will help you to get started with the ONOS Controller and Mininet.
 You need to be able to run the onos-tutorial-1.15.0 VM, which can be downloaded from this link https://drive.google.com/file/d/1JcGUJJDTtbHNnbFzC7SUK52RmMDBVUry/view
 
 ## Table of contents
+0. [Commands](#cmd)
 1. [Getting started with OpenvSwitch and ONOS](#ovs-onos)
 2. [Running Mininet with custom topology](#mininet)
 3. [Adding Flow Rules](#flow)
 4. [Adding Host Intent](#intent)
 5. [Question](#question)
 
+## Useful commands <a name="cmd"></a>
+1/ To re-attach to ONOS CLI, open a new terminal:
+```
+onos 1
+```
 
 ## Getting started with OpenvSwitch and ONOS <a name="ovs-onos"></a>
 1/ Open a Terminal and execute the following command to create an OvS switch
@@ -65,6 +71,7 @@ sudo python connected_topo.py
 ![custom_topo](https://raw.githubusercontent.com/Telecom-SudParis/sdn-onos/main/topo/connected_topo.png)
 
 5/ Mininet commands
+
 5.1/ Ping all hosts in the topology mutually 
 ```
 pingall
