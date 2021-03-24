@@ -2,7 +2,7 @@
 This tutorial will help you to get started with the ONOS Controller and Mininet.
 
 ## Prerequisite:
-You need to be able to run the onos-tutorial-1.15.0 VM, which can be downloaded from this link https://drive.google.com/file/d/1JcGUJJDTtbHNnbFzC7SUK52RmMDBVUry/view
+You need to be able to run the onos-minikube VM (~ 6Gb), which can be downloaded from this link https://drive.google.com/file/d/1sLxxDjChSgHRIyUOTr13hVzuLc80fMGL/view?usp=sharing
 
 ONOS prompt
 ```
