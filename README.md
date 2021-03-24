@@ -4,6 +4,27 @@ This tutorial will help you to get started with the ONOS Controller and Mininet.
 ## Prerequisite:
 You need to be able to run the onos-tutorial-1.15.0 VM, which can be downloaded from this link https://drive.google.com/file/d/1JcGUJJDTtbHNnbFzC7SUK52RmMDBVUry/view
 
+ONOS prompt
+```
+onos>
+```
+
+Mininet promt
+```
+mininet>
+```
+
+Linux user terminal
+```
+$
+```
+
+Super user terminal
+```
+#
+```
+
+
 ## Table of contents
 0. [Commands](#cmd)
 1. [Getting started with OpenvSwitch and ONOS](#ovs-onos)
@@ -15,18 +36,18 @@ You need to be able to run the onos-tutorial-1.15.0 VM, which can be downloaded 
 ## Useful commands <a name="cmd"></a>
 1/ To re-attach to ONOS CLI, open a new terminal:
 ```
-onos 1
+$ onos 1
 ```
 
 ## Getting started with OpenvSwitch and ONOS <a name="ovs-onos"></a>
 1/ Open a Terminal and execute the following command to create an OvS switch
 ```
-sudo ovs-vsctl add-br br1
+$ sudo ovs-vsctl add-br br1
 ```
 
 2/ Show OvS description
 ```
-sudo ovs-vsctl show
+$ sudo ovs-vsctl show
 ```
 
 3/ Run "Setup ONOS Cluster" to start ONOS controller => A new Terminal appears with the ONOS CLI prompt
@@ -43,27 +64,19 @@ http://172.17.0.5:8181/onos/ui/login.html
 
 5/ Establish an OpenFlow session to ONOS
 ```
-sudo ovs-vsctl set-controller br1 tcp:172.17.0.5:6653
+$ sudo ovs-vsctl set-controller br1 tcp:172.17.0.5:6653
 ```
 6/ Delete the bridge
 ```
-sudo ovs-vsctl del-br br1
+$ sudo ovs-vsctl del-br br1
 ```
 
 ## Running Mininet with custom topology <a name="mininet"></a>
-1/ In a Terminal, execute the command to emulate a simple topology with 1 switch and 2 hosts
+1/ Download and run the custom topology 
 ```
-sudo mn -c;
-sudo mn --controller=remote,ip=172.17.0.5,port=6653
-```
-
-2/ Press **Ctrl+D** to exit mininet
-
-3/ Download and run the custom topology 
-```
-curl https://raw.githubusercontent.com/Telecom-SudParis/sdn-onos/main/topo/connected_topo.py > connected_topo.py;
-sudo mn -c;
-sudo python connected_topo.py
+# curl https://raw.githubusercontent.com/Telecom-SudParis/sdn-onos/main/topo/connected_topo.py > connected_topo.py
+# mn -c
+# python connected_topo.py
 ```
 
 4/ Observe the custom topology on ONOS GUI
@@ -74,17 +87,17 @@ sudo python connected_topo.py
 
 5.1/ Ping all hosts in the topology mutually 
 ```
-pingall
+mininet> pingall
 ```
 
 5.2/ Send TCP packets between two hosts
 ```
-iperf h1 h3
+mininet> iperf h1 h3
 ```
 
 5.3/ Bring down a link
 ```
-link s1 s3 down
+mininet> link s1 s3 down
 ```
 
 ## Adding Flow Rules <a name="flow"></a>
@@ -321,17 +334,17 @@ http://172.17.0.5:8181/onos/v1/flows/application/org.onosproject.rest
 ### Reactive Flow Insertion
 1/ Flows are added on packet arrival using the Forwarding app
 ```
-app activate fwd
+onos> app activate fwd
 ```
 
 2/ To deactivate app
 ```
-app deactivate fwd
+onos> app deactivate fwd
 ```
 
 ## Adding Host Intent <a name="intent"></a>
 ```
-add-host-intent <host_id1> <host_id2>
+onos> add-host-intent <host_id1> <host_id2>
 ```
 
 ## Question <a name="question"></a>
