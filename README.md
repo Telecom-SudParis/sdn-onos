@@ -83,22 +83,7 @@ $ sudo ovs-vsctl del-br br1
 
 ![custom_topo](https://raw.githubusercontent.com/Telecom-SudParis/sdn-onos/main/topo/connected_topo.png)
 
-5/ Mininet commands
 
-5.1/ Ping all hosts in the topology mutually 
-```
-mininet> pingall
-```
-
-5.2/ Send TCP packets between two hosts
-```
-mininet> iperf h1 h3
-```
-
-5.3/ Bring down a link
-```
-mininet> link s1 s3 down
-```
 
 ## Adding Flow Rules <a name="flow"></a>
 ### Proactive Flow Insertion
@@ -327,17 +312,28 @@ http://172.17.0.5:8181/onos/v1/flows
 }
 ```
 
-2/ To delete all flows added by the REST API, send **DELETE** method to:
+2/ Send TCP packets between two hosts
+```
+mininet> iperf h1 h3
+```
+
+3/ To delete all flows added by the REST API, send **DELETE** method to:
 ```
 http://172.17.0.5:8181/onos/v1/flows/application/org.onosproject.rest
 ```
+
 ### Reactive Flow Insertion
 1/ Flows are added on packet arrival using the Forwarding app
 ```
 onos> app activate fwd
 ```
 
-2/ To deactivate app
+2/ Ping all hosts in the topology mutually 
+```
+mininet> pingall
+```
+
+3/ To deactivate app
 ```
 onos> app deactivate fwd
 ```
@@ -345,6 +341,11 @@ onos> app deactivate fwd
 ## Adding Host Intent <a name="intent"></a>
 ```
 onos> add-host-intent <host_id1> <host_id2>
+```
+
+Bring down a link to test auto-redirect
+```
+mininet> link s1 s3 down
 ```
 
 ## Question <a name="question"></a>
