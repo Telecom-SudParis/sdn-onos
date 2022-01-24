@@ -54,17 +54,17 @@ $ sudo ovs-vsctl show
 
 4.1/ Run "ONOS GUI" to access ONOS Web Interface or via the address with username/pwd is **karaf/karaf** or **onos/rocks**: 
 ```
-http://172.17.0.5:8181/onos/ui/login.html
+http://172.17.0.2:8181/onos/ui/login.html
 ```
 
 4.2/ Access the ONOS REST APIs as follows with the credentials **karaf/karaf**:
 ```
-172.17.0.5:8181/onos/v1/docs/
+172.17.0.2:8181/onos/v1/docs/
 ```
 
 5/ Establish an OpenFlow session to ONOS
 ```
-$ sudo ovs-vsctl set-controller br1 tcp:172.17.0.5:6653
+$ sudo ovs-vsctl set-controller br1 tcp:172.17.0.2:6653
 ```
 6/ Delete the bridge
 ```
@@ -93,7 +93,7 @@ $ sudo ovs-vsctl del-br br1
 
 1/ Send the **POST** method with the following URL and Content
 ```
-http://172.17.0.5:8181/onos/v1/flows
+http://172.17.0.2:8181/onos/v1/flows
 ```
 ```
 {
@@ -319,7 +319,7 @@ mininet> iperf h1 h3
 
 3/ To delete all flows added by the REST API, send **DELETE** method to:
 ```
-http://172.17.0.5:8181/onos/v1/flows/application/org.onosproject.rest
+http://172.17.0.2:8181/onos/v1/flows/application/org.onosproject.rest
 ```
 
 ### Reactive Flow Insertion
