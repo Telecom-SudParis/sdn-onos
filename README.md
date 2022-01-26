@@ -79,7 +79,8 @@ $ sudo ovs-vsctl del-br br1
 # python connected_topo.py
 ```
 
-4/ Observe the custom topology on ONOS GUI
+4/ Observe the custom topology on ONOS GUI:
+**NOTE:** It is normal if you don't see any host on the GUI. The hosts will appear after the ping.
 
 ![custom_topo](https://raw.githubusercontent.com/Telecom-SudParis/sdn-onos/main/topo/connected_topo.png)
 
