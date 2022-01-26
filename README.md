@@ -2,7 +2,7 @@
 This tutorial will help you to get started with the ONOS Controller and Mininet.
 
 ## Prerequisite:
-You need to be able to run the onos-minikube VM (~ 6Gb), which can be downloaded from this link https://drive.google.com/file/d/1sLxxDjChSgHRIyUOTr13hVzuLc80fMGL/view?usp=sharing
+You need to be able to run the onos-minikube VM (~ 6Gb), which can be downloaded from this link https://drive.google.com/file/d/1YdBudFsxGDuLT-P8Phf3sI0dGd_sH4mj/view?usp=sharing
 
 ONOS prompt
 ```
@@ -22,6 +22,19 @@ $
 Super user terminal
 ```
 #
+```
+
+ONOS GUI hot keys
+```
+H: to enable Host view
+
+M: to toggle offline visibility
+
+P: Port highlight
+
+A: Monitoring all traffic
+
+L: hide/show device label
 ```
 
 
@@ -80,6 +93,7 @@ $ sudo ovs-vsctl del-br br1
 ```
 
 4/ Observe the custom topology on ONOS GUI:
+
 **NOTE:** It is normal if you don't see any host on the GUI. The hosts will appear after the ping.
 
 ![custom_topo](https://raw.githubusercontent.com/Telecom-SudParis/sdn-onos/main/topo/connected_topo.png)
