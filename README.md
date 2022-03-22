@@ -365,9 +365,13 @@ mininet> link s1 s3 down
 
 ## Question <a name="question"></a>
 Please submit:
+
 1/ The content of the JSON message body in a separate .json file (Lab1-onos-NOMPrénom.json)
+
 2/ Two screenshots:
+  
   a) The ping between two hosts
+  
   b) The content of the flow table of three switches along the path using the following command (replace "s1" with your assigned switch)
   ```
   sudo ovs-ofctl dump-flows s1
