@@ -43,6 +43,8 @@ L: hide/show device label
 1. [Getting started with OpenvSwitch and ONOS](#ovs-onos)
 2. [Running Mininet with custom topology](#mininet)
 3. [Adding Flow Rules](#flow)
+3.1. [Proactive Flow Insertion](#proactive)
+3.2. [Reactive Flow Insertion](#reactive)
 4. [Adding Host Intent](#intent)
 5. [Question](#question)
 
@@ -101,7 +103,9 @@ $ sudo ovs-vsctl del-br br1
 
 
 ## Adding Flow Rules <a name="flow"></a>
-### Proactive Flow Insertion
+
+### Proactive Flow Insertion <a name="proactive"></a>
+
 **Prerequisite** Flows could be added via the REST API using Postman (Chrome Extension) and a Json Beautifier tool (https://jsonbeautifier.org/) 
 **NOTICE** If you use Postman or curl to send the REST request, remember to specify the Authorization method as follows
 ![rest_creds](https://raw.githubusercontent.com/Telecom-SudParis/sdn-onos/main/misc/rest_creds.png)
@@ -337,7 +341,8 @@ mininet> iperf h1 h3
 http://172.17.0.2:8181/onos/v1/flows/application/org.onosproject.rest
 ```
 
-### Reactive Flow Insertion
+### Reactive Flow Insertion <a name="reactive"></a>
+
 1/ Flows are added on packet arrival using the Forwarding app
 ```
 onos> app activate fwd
