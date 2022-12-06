@@ -60,6 +60,11 @@ $ onos 1
 $ sudo ovs-vsctl add-br br1
 ```
 
+1bis/ **(for M1/M2) Specify the OpenFlow version used in this switch**
+```
+ovs-vsctl set bridge br1 protocols=OpenFlow14
+```
+
 2/ Show OvS description
 ```
 $ sudo ovs-vsctl show
